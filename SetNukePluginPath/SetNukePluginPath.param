@@ -1,28 +1,20 @@
 [State]
 Type=Enum
 Items=Global Enabled;Opt-In;Disabled
-Label=State
-Default=Disabled
-Description=How this event plug-in should respond to events. If Global, all jobs and slaves will trigger the events for this plugin. If Opt-In, jobs and slaves can choose to trigger the events for this plugin. If Disabled, no events are triggered for this plugin.
-
-[SetNukePluginPathProperty]
-Type=enum
-Values=On Job Started;On Job Finished;On Job Started and On Job Finished
 Category=Options
 CategoryOrder=0
+Index=0
+Label=State
+Default=Global Enabled
+Description=How this event plug-in should respond to events. If Global, all jobs and slaves will trigger the events for this plugin. If Opt-In, jobs and slaves can choose to trigger the events for this plugin. If Disabled, no events are triggered for this plugin.
+
+[SetNukePluginPath]
+Type=Enum
+Items=On Job Started;On Job Submitted;On Job Started and On Job Submitted
+Category=Options
+#CategoryOrder=0
 Index=1
-Label=run Nuke custom plugin
-Default=On Job Started
+Label=set Nuke custom plugin path directory
+Default=On Job Submitted
 Description=Mostly just to show an example property
 
-[FakeProp1]
-Type=integer
-Minimum=0
-Maximum=100
-Increment=1
-Category=Misc
-CategoryOrder=0
-Index=2
-Label=Greatness level
-Default=0
-Description=Shows yous how to make an integer range
