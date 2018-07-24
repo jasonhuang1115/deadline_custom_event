@@ -44,6 +44,7 @@ class SetNukePluginPathListener (DeadlineEventListener):
             myDir = r"\\lax04rend\Nikola\library\scripts\nuke"
             print (myDir)
             job.JobCustomPluginDirectory=myDir
+            job.SetJobEnvironmentKeyValue("NUKE_PATH", myDir)
         
         RepositoryUtils.SaveJob(job)
         pass
