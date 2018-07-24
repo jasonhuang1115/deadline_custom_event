@@ -31,7 +31,7 @@ class SetNukePluginPathListener (DeadlineEventListener):
     # def OnJobStarted(self, job):
     #     eventType = self.GetConfigEntryWithDefault( "SetNukePluginPath", "On Job Started" )
     #     if 'Nuke' in job.PluginName and ( eventType == "On Job Started" ):
-    #         myDir = r"//lax04rend/Nikola/library/scripts/nuke"
+    #         myDir = r"\\network\library\scripts\nuke"
     #         print (myDir)
     #         job.JobCustomPluginDirectory=myDir
         
@@ -41,7 +41,7 @@ class SetNukePluginPathListener (DeadlineEventListener):
     def OnJobSubmitted(self, job):
         eventType = self.GetConfigEntryWithDefault( "SetNukePluginPath", "On Job Submitted" )
         if 'Nuke' in job.PluginName and ( eventType == "On Job Submitted" ):
-            myDir = r"\\lax04rend\Nikola\library\scripts\nuke"
+            myDir = r"\\network\library\scripts\nuke"
             print (myDir)
             job.JobCustomPluginDirectory=myDir
             job.SetJobEnvironmentKeyValue("NUKE_PATH", myDir)
