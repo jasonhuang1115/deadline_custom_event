@@ -1,4 +1,4 @@
-This is a simple Deadline custom event. 
+This is a simple Deadline custom event plugin. 
 To use it, copy/paste the SetNukePluginPath folder (along with content inside) to your Deadline repo.
  (ex. \\network..\\DeadlineRepo10\custom\events\SetNukePluginPath)
 That's it.
